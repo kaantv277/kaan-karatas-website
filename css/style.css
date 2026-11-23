@@ -91,11 +91,11 @@ a.writing-card{transition:background .2s,border-color .2s}a.writing-card:hover{b
 .paper-list .arrow-link{margin-top:8px;display:inline-block}
 
 /* Essay */
-.essay{max-width:700px;margin:0 auto;padding:80px 7% 100px;font:1.15rem/1.85 var(--serif);color:var(--ink-2)}
+.essay{max-width:820px;margin:0 auto;padding:80px 32px 100px;font:1.15rem/1.85 var(--serif);color:var(--ink-2)}
 .essay h2{font:500 1.75rem/1.25 var(--serif);color:var(--ink);margin:56px 0 16px}
 .essay h2:first-child{margin-top:0}
 .essay p{margin:0 0 22px}
-.essay p:first-of-type:first-letter{float:left;font-size:3.4rem;line-height:.9;padding:6px 8px 0 0;color:var(--accent)}
+
 .essay-note{margin-top:50px!important;padding:20px 24px;border-left:3px solid var(--accent);background:var(--card);font:.9rem/1.7 var(--sans);color:var(--ink-2)}
 .essay-note a{border-bottom:1px solid var(--accent)}
 .essay .arrow-link{margin-top:20px;display:inline-block}
