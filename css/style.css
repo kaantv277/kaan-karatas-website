@@ -193,3 +193,22 @@ html,body{overflow-x:clip}
 .lightbox.open img{transform:none}
 .lightbox p{color:#e9e0cf;font:.85rem/1.5 var(--sans);margin:16px 0 0;text-align:center;max-width:700px}
 .lightbox button{position:absolute;top:18px;right:22px;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;font:500 .85rem var(--sans);padding:8px 14px;cursor:pointer}
+/* Book posts */
+.book-note{font:600 .72rem/1.5 var(--sans)!important;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:34px!important}
+.book-note em{font-style:normal;color:var(--ink)}
+.refrain{font:italic 500 1.3rem/1.5 var(--serif);color:var(--accent);text-align:center;margin:34px 0!important}
+.pull{margin:40px 0 6px;padding:0;border:0;font:italic 500 1.9rem/1.3 var(--serif);color:var(--ink);text-align:center}
+.pull-cite{text-align:center;font:.85rem var(--sans)!important;color:var(--muted)}
+.principles{list-style:none;padding:0;margin:0 0 30px;display:flex;flex-wrap:wrap;gap:10px}
+.principles li{border:1px solid var(--line);background:var(--card);padding:8px 16px;font:500 .9rem var(--sans);color:var(--ink)}
+/* New-post notice */
+.post-toast{position:fixed;top:96px;right:24px;z-index:40;width:340px;max-width:calc(100vw - 32px);background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);box-shadow:0 20px 44px -22px rgba(40,30,20,.45);padding:16px 44px 16px 18px;transform:translateX(calc(100% + 40px));opacity:0;transition:transform .45s cubic-bezier(.2,.7,.2,1),opacity .3s}
+.post-toast.show{transform:none;opacity:1}
+.post-toast .t-label{font:600 .66rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+.post-toast a.t-link{display:block;font:500 1.1rem/1.3 var(--serif);color:var(--ink)}
+.post-toast a.t-link:hover{color:var(--accent)}
+.post-toast .t-more{font:.8rem var(--sans);color:var(--muted);margin:6px 0 0}
+.post-toast button{position:absolute;top:8px;right:8px;width:28px;height:28px;border:0;background:none;color:var(--muted);font:1.1rem var(--sans);cursor:pointer}
+.post-toast button:hover{color:var(--ink)}
+@media (max-width:620px){.post-toast{top:auto;bottom:16px;right:16px;transform:translateY(calc(100% + 30px))}}
+@media (prefers-reduced-motion:reduce){.post-toast{transition:none}}
