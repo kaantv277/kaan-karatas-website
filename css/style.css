@@ -170,7 +170,7 @@ a.hero-card:hover{transform:translateY(-3px);box-shadow:0 24px 48px -24px rgba(4
 .clip-left .clip-a{transform:translateX(-60px) rotate(-5deg);width:96%;align-self:flex-start}
 .clip-left .clip-b{transform:translateX(-46px) rotate(3.5deg);width:88%;align-self:flex-end;margin-top:44px}
 .clip-right{display:grid;grid-template-columns:1fr 1.3fr;align-items:center;gap:0}
-.clip-right .clip-p{transform:rotate(-2deg);position:relative;z-index:2;margin-right:-14px}
+.clip-right .clip-p{transform:none;position:relative;z-index:2;margin-right:-14px}
 .clip-right .clip-p figcaption{font:italic .82rem var(--serif);text-transform:none;letter-spacing:0}
 .clip-right .clip-c{transform:translateX(56px) rotate(5deg);margin-top:40px}
 .hero-collage .hero-copy{position:relative;z-index:1}
@@ -183,4 +183,13 @@ a.hero-card:hover{transform:translateY(-3px);box-shadow:0 24px 48px -24px rgba(4
 @media (max-width:1100px){.clip-left .clip-a{transform:rotate(-5deg)}.clip-left .clip-b{transform:rotate(3.5deg);margin-top:24px}.clip-right .clip-c{transform:rotate(5deg)}}
 html,body{overflow-x:clip}
 .hero-collage .hero-intro{max-width:560px}.hero-collage .hero-proof{max-width:580px}
-@media (min-width:1101px) and (max-width:1560px){.clip-left .clip-a{transform:translateX(-8px) rotate(-5deg)}.clip-left .clip-b{transform:translateX(0) rotate(3.5deg)}.clip-right .clip-c{transform:translateX(6px) rotate(5deg)}.hero.hero-collage{padding-left:5%;padding-right:5%;gap:48px}}
+@media (min-width:1101px) and (max-width:1780px){.clip-left .clip-a{transform:translateX(-8px) rotate(-5deg)}.clip-left .clip-b{transform:translateX(0) rotate(3.5deg)}.clip-right .clip-c{transform:translateX(6px) rotate(5deg)}.hero.hero-collage{padding-left:5%;padding-right:5%;gap:48px}}
+.clip-right .clip-p:hover{transform:scale(1.02)!important}
+.clip img{cursor:zoom-in}
+/* Lightbox */
+.lightbox{position:fixed;inset:0;z-index:50;background:rgba(20,17,14,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4vh 4vw;opacity:0;pointer-events:none;transition:opacity .2s;cursor:zoom-out}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:100%;max-height:82vh;width:auto;height:auto;background:#fffdf8;padding:10px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);transform:scale(.96);transition:transform .2s}
+.lightbox.open img{transform:none}
+.lightbox p{color:#e9e0cf;font:.85rem/1.5 var(--sans);margin:16px 0 0;text-align:center;max-width:700px}
+.lightbox button{position:absolute;top:18px;right:22px;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;font:500 .85rem var(--sans);padding:8px 14px;cursor:pointer}

@@ -24,3 +24,31 @@ if (contactForm) {
     window.location.href = 'mailto:kaanburak2009@gmail.com?subject=' + encodeURIComponent(data.get('subject')) + '&body=' + encodeURIComponent(body);
   });
 }
+
+// Lightbox: click a photo in the home collage to open it large.
+const clips = document.querySelectorAll('.clip img');
+if (clips.length) {
+  const box = document.createElement('div');
+  box.className = 'lightbox';
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-modal', 'true');
+  box.innerHTML = '<button type="button" aria-label="Close">Close ✕</button><img alt=""><p></p>';
+  document.body.appendChild(box);
+  const big = box.querySelector('img');
+  const cap = box.querySelector('p');
+  const close = () => box.classList.remove('open');
+  clips.forEach((img) => {
+    img.setAttribute('tabindex', '0');
+    const open = () => {
+      big.src = img.currentSrc || img.src;
+      big.alt = img.alt;
+      const fc = img.closest('figure').querySelector('figcaption');
+      cap.textContent = fc ? fc.textContent : img.alt;
+      box.classList.add('open');
+    };
+    img.addEventListener('click', open);
+    img.addEventListener('keydown', (e) => { if (e.key === 'Enter') open(); });
+  });
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+}
