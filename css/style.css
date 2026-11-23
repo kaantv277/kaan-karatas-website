@@ -122,3 +122,9 @@ a.writing-card{transition:background .2s,border-color .2s}a.writing-card:hover{b
 .essay{padding:55px 7% 80px;font-size:1.08rem}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+.post-date{font:600 .72rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.paper-list strong a{border-bottom:1px solid transparent}.paper-list strong a:hover{border-color:var(--accent)}
+.post-sign{text-align:right;font-style:italic;color:var(--ink)}
+.contents-list{margin:0 0 20px;padding-left:1.3em}.contents-list li{padding:4px 0}
+.citation{padding:18px 22px;background:var(--card);border:1px solid var(--line);font:.95rem/1.7 var(--sans);overflow-wrap:anywhere}
