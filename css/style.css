@@ -161,18 +161,18 @@ a.hero-card:hover{transform:translateY(-3px);box-shadow:0 24px 48px -24px rgba(4
 @media (max-width:520px){.hero-card{flex-direction:column;align-items:flex-start;padding:26px 22px}.archive-card img{width:110px}}
 
 /* Home hero collage: press clippings */
-.hero.hero-collage{max-width:1500px;grid-template-columns:minmax(0,.95fr) minmax(0,1.3fr) minmax(0,1.2fr);gap:56px;padding:70px 5% 40px;align-items:center}
+.hero.hero-collage{max-width:1640px;grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr) minmax(0,1.25fr);gap:64px;padding:70px 3.5% 40px;align-items:center}
 .clip{margin:0;background:#fffdf8;padding:10px 10px 0;border:1px solid #e4dccb;box-shadow:0 1px 0 rgba(0,0,0,.04),0 22px 40px -26px rgba(40,30,15,.55);transition:transform .35s ease}
 .clip img{display:block;width:100%;height:auto;filter:saturate(.8) contrast(1.02)}
 .clip figcaption{font:500 .66rem/1.4 var(--sans);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:9px 2px 11px}
 .clip:hover{transform:rotate(0) scale(1.02)!important;z-index:3}
 .clip-col{position:relative;display:flex;flex-direction:column}
-.clip-left .clip-a{transform:translateX(-36px) rotate(-5deg);width:96%;align-self:flex-start}
-.clip-left .clip-b{transform:translateX(-24px) rotate(3.5deg);width:88%;align-self:flex-end;margin-top:44px}
-.clip-right{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0}
+.clip-left .clip-a{transform:translateX(-60px) rotate(-5deg);width:96%;align-self:flex-start}
+.clip-left .clip-b{transform:translateX(-46px) rotate(3.5deg);width:88%;align-self:flex-end;margin-top:44px}
+.clip-right{display:grid;grid-template-columns:1fr 1.3fr;align-items:center;gap:0}
 .clip-right .clip-p{transform:rotate(-2deg);position:relative;z-index:2;margin-right:-14px}
 .clip-right .clip-p figcaption{font:italic .82rem var(--serif);text-transform:none;letter-spacing:0}
-.clip-right .clip-c{transform:translateX(44px) rotate(5deg);margin-top:40px}
+.clip-right .clip-c{transform:translateX(56px) rotate(5deg);margin-top:40px}
 .hero-collage .hero-copy{position:relative;z-index:1}
 @media (max-width:1100px){
  .hero.hero-collage{grid-template-columns:1fr 1fr;grid-template-areas:"copy copy" "left right";gap:44px}
@@ -181,3 +181,6 @@ a.hero-card:hover{transform:translateY(-3px);box-shadow:0 24px 48px -24px rgba(4
  .hero.hero-collage{grid-template-columns:1fr;grid-template-areas:"copy" "right" "left";padding:50px 7% 30px}
  .clip-right{max-width:380px}.clip-left{max-width:380px}}
 @media (max-width:1100px){.clip-left .clip-a{transform:rotate(-5deg)}.clip-left .clip-b{transform:rotate(3.5deg);margin-top:24px}.clip-right .clip-c{transform:rotate(5deg)}}
+html,body{overflow-x:clip}
+.hero-collage .hero-intro{max-width:560px}.hero-collage .hero-proof{max-width:580px}
+@media (min-width:1101px) and (max-width:1560px){.clip-left .clip-a{transform:translateX(-8px) rotate(-5deg)}.clip-left .clip-b{transform:translateX(0) rotate(3.5deg)}.clip-right .clip-c{transform:translateX(6px) rotate(5deg)}.hero.hero-collage{padding-left:5%;padding-right:5%;gap:48px}}
