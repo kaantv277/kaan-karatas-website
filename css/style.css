@@ -132,11 +132,11 @@ a.writing-card{transition:background .2s,border-color .2s}a.writing-card:hover{b
 /* Page transitions */
 @view-transition{navigation:auto}
 .site-header{view-transition-name:site-header}
-::view-transition-old(root){animation:vt-out .22s ease-in both}
-::view-transition-new(root){animation:vt-in .38s cubic-bezier(.2,.7,.2,1) both}
+::view-transition-old(root){animation:vt-out .12s ease-in both}
+::view-transition-new(root){animation:vt-in .22s cubic-bezier(.2,.7,.2,1) both}
 @keyframes vt-out{to{opacity:0;transform:translateY(-8px)}}
 @keyframes vt-in{from{opacity:0;transform:translateY(14px)}}
-main{animation:page-in .5s cubic-bezier(.2,.7,.2,1) both}
+main{animation:page-in .28s cubic-bezier(.2,.7,.2,1) both}
 @keyframes page-in{from{opacity:0;transform:translateY(14px)}}
 @supports (view-transition-name:none){main{animation:none}}
 @media (prefers-reduced-motion:reduce){main,::view-transition-old(root),::view-transition-new(root){animation:none}}
