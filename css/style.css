@@ -214,3 +214,7 @@ html,body{overflow-x:clip}
 @media (prefers-reduced-motion:reduce){.post-toast{transition:none}}
 
 .hero-press{margin:14px 0 0;font:.85rem var(--sans);color:var(--muted)}.hero-press a{color:var(--ink);border-bottom:1px solid var(--accent)}
+
+.lead-in{font-size:1.2rem;color:var(--ink)}
+.exercise{margin:0 0 26px;padding-left:1.3em}.exercise li{margin:0 0 12px;padding:10px 14px;background:var(--card);border-left:3px solid var(--accent);font-style:italic}
+.principles-list{margin:0 0 24px;padding-left:1.2em}.principles-list li{margin:0 0 8px}
