@@ -212,3 +212,5 @@ html,body{overflow-x:clip}
 .post-toast button:hover{color:var(--ink)}
 @media (max-width:620px){.post-toast{top:auto;bottom:16px;right:16px;transform:translateY(calc(100% + 30px))}}
 @media (prefers-reduced-motion:reduce){.post-toast{transition:none}}
+
+.hero-press{margin:14px 0 0;font:.85rem var(--sans);color:var(--muted)}.hero-press a{color:var(--ink);border-bottom:1px solid var(--accent)}
