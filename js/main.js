@@ -14,14 +14,39 @@ document.querySelectorAll('.year').forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
 
-// Contact form: opens the visitor's own email app with the message filled in.
+// Contact form: sends the message to my inbox through FormSubmit (no account, no database on this site).
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
+  const status = document.getElementById('form-status');
+  const button = contactForm.querySelector('button[type="submit"]');
+  const fallback = 'If that does not work, please write to <a href="mailto:kaanburak2009@gmail.com">kaanburak2009@gmail.com</a>.';
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(contactForm);
-    const body = `${data.get('message')}\n\n— ${data.get('name')}`;
-    window.location.href = 'mailto:kaanburak2009@gmail.com?subject=' + encodeURIComponent(data.get('subject')) + '&body=' + encodeURIComponent(body);
+    if (data.get('_honey')) return;
+    button.disabled = true; button.textContent = 'Sending…';
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/kaanburak2009@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'), email: data.get('email'), message: data.get('message'),
+          _subject: 'Website message: ' + data.get('subject'), _replyto: data.get('email'),
+          _template: 'table', _captcha: 'false'
+        })
+      });
+      const out = await res.json().catch(() => ({}));
+      if (res.ok && String(out.success) === 'true') {
+        contactForm.reset();
+        status.innerHTML = '<strong>Thank you. Your message has been sent.</strong> I will reply to the email address you gave.';
+        button.textContent = 'Sent ✓';
+        return;
+      }
+      throw new Error(out.message || 'Not sent');
+    } catch (err) {
+      status.innerHTML = 'Sorry, the message could not be sent right now. ' + fallback;
+      button.disabled = false; button.textContent = 'Try again →';
+    }
   });
 }
 
