@@ -79,7 +79,7 @@ if (clips.length) {
 }
 
 // "New on the blog" notice. Update LATEST_POST when a new post is published.
-const LATEST_POST = { slug: 'persistence', title: 'Persist until you succeed', more: 'A new chapter from my book in progress' };
+const LATEST_POST = { slug: 'take-action', title: 'Take action', more: 'A new chapter from my book in progress' };
 (function () {
   const css = document.querySelector('link[href*="css/style.css"]');
   if (!css) return;
