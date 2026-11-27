@@ -26,7 +26,7 @@ if (contactForm) {
     if (data.get('_honey')) return;
     button.disabled = true; button.textContent = 'Sending…';
     try {
-      const res = await fetch('https://formsubmit.co/ajax/kaanburak2009@gmail.com', {
+      const res = await fetch('https://formsubmit.co/ajax/6803db90101989a61a36aa06d7b542a9', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
